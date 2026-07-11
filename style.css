@@ -143,8 +143,15 @@ li::marker {
 }
 
 .length-gd{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
     margin: 60px auto;
     text-align: center;
+}
+.unque{
+    background-color: #1d1d1f !important;
 }
 .new-container{
   margin-top: 30px;
@@ -188,7 +195,7 @@ background-color: #1D4ED8;
   border: none;
   cursor: pointer;
 }
-/* Custom CSS Variables matching the DevConf 2026 UI Framework */
+
 :root {
   --ai-bg-main: #f5f5f7;
   --ai-bg-card: #ffffff;
@@ -201,7 +208,7 @@ background-color: #1D4ED8;
   --ai-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base Section Configuration */
+
 .ai-zone-section {
   background-color: var(--ai-bg-main);
   padding: 100px 24px;
@@ -213,7 +220,7 @@ background-color: #1D4ED8;
   margin: 0 auto;
 }
 
-/* Section Header Styles */
+
 .ai-zone-header {
   text-align: center;
   max-width: 680px;
@@ -249,20 +256,20 @@ background-color: #1D4ED8;
   margin: 0;
 }
 
-/* Grid Layout */
+
 .ai-zone-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
 
-/* Feature Card Wrapper */
+
 .ai-card {
   background-color: var(--ai-bg-card);
   border-radius: var(--ai-radius-lg);
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
-  overflow: hidden; /* এর ফলে ইমেজের কোণাগুলো কার্ডের সাথে গোল হয়ে কেটে যাবে */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.4s var(--ai-transition-smooth), 
@@ -270,10 +277,10 @@ background-color: #1D4ED8;
               border-color 0.4s var(--ai-transition-smooth);
 }
 
-/* Modern Card Image Cover System */
+
 .ai-card-image-wrapper {
   width: 100%;
-  height: 200px; /* ইমেজের ফিক্সড স্ট্যান্ডার্ড হাইট */
+  height: 200px;
   overflow: hidden;
   position: relative;
   background-color: #eaeaea;
@@ -282,11 +289,11 @@ background-color: #1D4ED8;
 .ai-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ইমেজ রেশিও নষ্ট না করে সুন্দরভাবে ফিট করে */
+  object-fit: cover; 
   transition: transform 0.6s var(--ai-transition-smooth);
 }
 
-/* Card Content Padding Box */
+
 .ai-card-content {
   padding: 32px;
   display: flex;
@@ -294,14 +301,14 @@ background-color: #1D4ED8;
   flex-grow: 1;
 }
 
-/* Premium Hover Micro-interactions */
+
 .ai-card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 122, 255, 0.18);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.07);
 }
 
-/* Hover করলে ইমেজ আলতো করে জুম হবে */
+
 .ai-card:hover .ai-card-img {
   transform: scale(1.05);
 }
@@ -322,7 +329,7 @@ background-color: #1D4ED8;
   flex-grow: 1;
 }
 
-/* Typography Interactive Links */
+
 .ai-card-link {
   color: var(--ai-color-accent);
   font-size: 15px;
@@ -343,7 +350,7 @@ background-color: #1D4ED8;
   transform: translateX(4px);
 }
 
-/* Responsive Micro Breakpoints */
+
 @media (max-width: 992px) {
   .ai-zone-title { font-size: 34px; }
   .ai-card-content { padding: 24px; }
