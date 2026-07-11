@@ -110,8 +110,11 @@ header {
  .gallary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 32px;
     margin-top: 20px;
+    margin: 0 auto;
+   
+
  } 
  
 .google {
@@ -138,8 +141,216 @@ margin-top: 15px;
 li::marker {
     color: #2563EB;
 }
-.new-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+
+.length-gd{
+    margin: 60px auto;
+    text-align: center;
+}
+.new-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.new-container .length-gd {
+  border: 2px solid lightblue;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: left;
+}
+.new-btn-one {
+background-color: white;
+  padding: 12px 24px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 16px;
+  color: blue;
+  border: 1px solid blue;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.new-btn-three{
+background-color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.new-btn-two{
+background-color: #1D4ED8;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* Custom CSS Variables matching the DevConf 2026 UI Framework */
+:root {
+  --ai-bg-main: #f5f5f7;
+  --ai-bg-card: #ffffff;
+  --ai-text-primary: #1d1d1f;
+  --ai-text-secondary: #6e6e73;
+  --ai-color-accent: #007aff;
+  --ai-radius-lg: 20px;
+  --ai-radius-md: 12px;
+  --ai-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ai-transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Section Configuration */
+.ai-zone-section {
+  background-color: var(--ai-bg-main);
+  padding: 100px 24px;
+  font-family: var(--ai-font-family);
+}
+
+.ai-zone-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header Styles */
+.ai-zone-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px auto;
+}
+
+.ai-zone-badge {
+  display: inline-block;
+  background-color: rgba(0, 122, 255, 0.1);
+  color: var(--ai-color-accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.ai-zone-title {
+  color: var(--ai-text-primary);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+}
+
+.ai-zone-subtitle {
+  color: var(--ai-text-secondary);
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Grid Layout */
+.ai-zone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Feature Card Wrapper */
+.ai-card {
+  background-color: var(--ai-bg-card);
+  border-radius: var(--ai-radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+  overflow: hidden; /* এর ফলে ইমেজের কোণাগুলো কার্ডের সাথে গোল হয়ে কেটে যাবে */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s var(--ai-transition-smooth), 
+              box-shadow 0 0.4s var(--ai-transition-smooth), 
+              border-color 0.4s var(--ai-transition-smooth);
+}
+
+/* Modern Card Image Cover System */
+.ai-card-image-wrapper {
+  width: 100%;
+  height: 200px; /* ইমেজের ফিক্সড স্ট্যান্ডার্ড হাইট */
+  overflow: hidden;
+  position: relative;
+  background-color: #eaeaea;
+}
+
+.ai-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ইমেজ রেশিও নষ্ট না করে সুন্দরভাবে ফিট করে */
+  transition: transform 0.6s var(--ai-transition-smooth);
+}
+
+/* Card Content Padding Box */
+.ai-card-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Premium Hover Micro-interactions */
+.ai-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 122, 255, 0.18);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.07);
+}
+
+/* Hover করলে ইমেজ আলতো করে জুম হবে */
+.ai-card:hover .ai-card-img {
+  transform: scale(1.05);
+}
+
+.ai-card-title {
+  font-size: 22px;
+  color: var(--ai-text-primary);
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+.ai-card-description {
+  color: var(--ai-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+/* Typography Interactive Links */
+.ai-card-link {
+  color: var(--ai-color-accent);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.icon-arrow {
+  font-size: 12px;
+  transition: transform 0.3s var(--ai-transition-smooth);
+}
+
+.ai-card:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Micro Breakpoints */
+@media (max-width: 992px) {
+  .ai-zone-title { font-size: 34px; }
+  .ai-card-content { padding: 24px; }
+}
+
+@media (max-width: 768px) {
+  .ai-zone-grid { grid-template-columns: 1fr; gap: 24px; }
+  .ai-card-image-wrapper { height: 180px; }
+  .ai-zone-title { font-size: 28px; }
 }
