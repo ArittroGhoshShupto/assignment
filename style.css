@@ -367,11 +367,9 @@ padding: 12px 24px;
   .ai-zone-title { font-size: 28px; }
 }
 footer {
-    max-width: 1140px;
-    margin: 80px auto;
-    padding: 50px;
-    border-radius: 16px;
-    background-color: #FFF8F3;
+    margin: 70px 0;
+    padding: 60px;
+    background-color: #eaeaea;
 }
 
 .footer-top {
@@ -391,13 +389,13 @@ footer {
 
 .footer-left p {
     color: black;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 .footer-right {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 55px;
+    margin-top: 60px;
 }
 
 .footer-right a {
@@ -407,7 +405,7 @@ footer {
 }
 .footer-divider {
     border: 0;
-    border-top: 1px solid #FFFFFF;
+    border-top: 1px solid black;
     margin: 20px 0;
 }
 .footer-bottom {
